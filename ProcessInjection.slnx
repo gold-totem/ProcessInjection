@@ -1,0 +1,18 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/tools/">
+    <Project Path="../../PELoader/LibPELoader/LibPELoader.vcxproj" Id="38eff300-d7fa-4daf-9432-3b7adb2a1047" />
+    <Project Path="InjectDll/InjectDll.vcxproj" Id="1441efbf-e3af-4b60-aca1-c8ca0dad492e" />
+  </Folder>
+  <Project Path="APCInjection/APCInjection.vcxproj" Id="ca1dbc30-2be6-406d-96ec-8873f622b932" />
+  <Project Path="ClassicInjection/ClassicInjection.vcxproj" Id="7891182e-b47d-42fa-af2e-884471343b3b" />
+  <Project Path="DLLInjection/DLLInjection.vcxproj" Id="c6cf04df-2723-4a66-8942-d3fda29d9e03">
+    <BuildDependency Project="InjectDll/InjectDll.vcxproj" />
+  </Project>
+  <Project Path="EarlyBirdInjection/EarlyBirdInjection.vcxproj" Id="409562ec-8562-44aa-9fcc-5e1944cbc576" />
+  <Project Path="LocalPEInjection/LocalPEInjection.vcxproj" Id="785db494-d59c-4dea-9b42-1ba35f4953c6" />
+  <Project Path="RemoteThreadHijacking/RemoteThreadHijacking.vcxproj" Id="dd6b91f7-7f78-4b60-8728-c8fa1c0936e7" />
+</Solution>
