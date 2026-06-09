@@ -1,0 +1,3 @@
+[submodule "PELoader"]
+	path = PELoader
+	url = https://github.com/gold-totem/PELoader
