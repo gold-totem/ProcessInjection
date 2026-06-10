@@ -1,6 +1,10 @@
 // dllmain.cpp : Defines the entry point for the DLL application.
 #include "pch.h"
 
+extern "C" __declspec(dllexport) void __cdecl printMsg() {
+    MessageBox(NULL, L"Injected successfully", L"Success", MB_OK);
+}
+
 BOOL APIENTRY DllMain( HMODULE hModule,
                        DWORD  ul_reason_for_call,
                        LPVOID lpReserved

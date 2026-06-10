@@ -2,15 +2,13 @@
 #include <filesystem>
 #include <fstream>
 #include <Windows.h>
-#include "PELoader.h"
-
-
+#include "InProcLoader.h"
 // Local PE injection.
 
 int main(int argc, char* argv[]) {
 
 	if (argc != 2) {
-		std::wcerr << L"Usage:\n\t" << argv[0] << L" <dllPath>\n";
+		std::wcerr << L"Usage:\n\t" << argv[0] << L" <pe_Path>\n";
 		return EXIT_FAILURE;
 	}
 
@@ -30,10 +28,10 @@ int main(int argc, char* argv[]) {
 		std::cerr << "Failed to read file\n";
 		return EXIT_FAILURE;
 	}
-	PELdr::PELoader peLoader;
+	PELdr::InProcLoader peLoader;
 
 
-	if (!peLoader.loadPE(GetCurrentProcess(), bytes.data())) {
+	if (!peLoader.loadPE(bytes.data())) {
 		std::cerr << "Failed loading the PE\n";
 		return EXIT_FAILURE;
 	}
