@@ -170,6 +170,7 @@ int wmain(int argc, wchar_t* argv[]) {
 
 	HANDLE hProc = getProcessHandle(L"notepad.exe");
 	if (hProc == INVALID_HANDLE_VALUE) {
+		std::cerr << "A notepad process was not found\n";
 		return EXIT_FAILURE;
 	}
 

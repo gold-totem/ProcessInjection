@@ -18,6 +18,7 @@
     <BuildDependency Project="PELoader/LibPELoader/LibPELoader.vcxproj" />
   </Project>
   <Project Path="RemotePEInjection/RemotePEInjection.vcxproj" Id="d9374e1d-a912-49a0-8623-f8a79fc9309b">
+    <BuildDependency Project="InjectDll/InjectDll.vcxproj" />
     <BuildDependency Project="PELoader/LibRemotePELoader/LibRemotePELoader.vcxproj" />
   </Project>
   <Project Path="RemoteThreadHijacking/RemoteThreadHijacking.vcxproj" Id="dd6b91f7-7f78-4b60-8728-c8fa1c0936e7" />
